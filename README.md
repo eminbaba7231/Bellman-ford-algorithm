@@ -1,36 +1,39 @@
-# Bellman-Ford API (Kullanıcı Dostu Sürüm)
+# Bellman-Ford Algorithm Visualizer
 
-Bu proje, kullanıcıdan sadece düğümler ve kenar mesafeleri alarak Bellman-Ford algoritmasını çalıştırır. Kod bilgisi gerektirmez.
+This project visualizes the Bellman-Ford algorithm using Python and Streamlit.
 
-## Kullanım
+## 🔍 Features
 
-1. Frontend kullanıcıdan:
-   - Düğümleri (örn: A, B, C)
-   - Kenarları (örn: A,B,4)
-   - Kaynak düğümü (örn: A)
-   olarak metin girişleriyle alır.
+- Interactive graph input
+- Step-by-step shortest path updates
+- Negative cycle detection
 
-2. Backend bu bilgileri işler ve:
-   - Adım adım sonuçları döner
-   - Negatif döngü varsa uyarır
-
-## Başlatmak İçin
+## 🛠 Installation
 
 ```bash
+git clone https://github.com/your-username/bellman-ford-visualizer.git
+cd bellman-ford-visualizer
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
-uvicorn app:app --reload
+streamlit run app.py
 ```
 
-## POST isteği örneği
+## 📈 Time & Space Complexity
 
-```json
-{
-  "nodes": ["A", "B", "C"],
-  "edges": [
-    {"from_node": "A", "to_node": "B", "weight": 4},
-    {"from_node": "A", "to_node": "C", "weight": 5},
-    {"from_node": "B", "to_node": "C", "weight": -2}
-  ],
-  "source": "A"
-}
+- **Time Complexity:** O(V × E)
+- **Space Complexity:** O(V)
+
+## 📸 Screenshots
+
+Include these in `docs/screenshots/`.
+
+## 🌐 Deployed App
+
+[https://your-streamlit-app.streamlit.app](https://your-streamlit-app.streamlit.app)
+
+## ✅ Test
+
+```bash
+python -m unittest test_algorithm.py
 ```
