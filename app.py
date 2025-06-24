@@ -1,6 +1,6 @@
 import streamlit as st
 from algorithm import bellman_ford
-from visualizer import draw_graph
+from utils import draw_graph
 
 st.set_page_config("Bellman-Ford Visualizer", layout="centered")
 
